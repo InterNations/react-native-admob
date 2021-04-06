@@ -163,12 +163,14 @@ class ReactPublisherAdView extends ReactViewGroup implements AppEventListener {
                 String gender = (String) this.customTargeting.get("gender");
                 String lc = (String) this.customTargeting.get("lc");
                 String isExpat = (String) this.customTargeting.get("is_expat");
+                String expatType = (String) this.customTargeting.get("expat_type");
 
                 adRequestBuilder.addCustomTargeting("corigin", corigin);
                 adRequestBuilder.addCustomTargeting("cresidency", cresidency);
                 adRequestBuilder.addCustomTargeting("gender", gender);
-                adRequestBuilder.addCustomTargeting("lc", lc);
-                adRequestBuilder.addCustomTargeting("isExpat", isExpat);
+                adRequestBuilder.addCustomTargeting("lc", lc);  
+                adRequestBuilder.addCustomTargeting("is_expat", isExpat);
+                adRequestBuilder.addCustomTargeting("expat_type", expatType);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
